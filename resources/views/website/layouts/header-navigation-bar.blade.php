@@ -153,9 +153,15 @@
                 </div>
             </div>
 
-            <a href="#services-section" class="text-sm font-semibold leading-6 text-gray-900">Services</a>
-            <a href="#team-section" class="text-sm font-semibold leading-6 text-gray-900">Teams</a>
-            <a href="#project-section" class="text-sm font-semibold leading-6 text-gray-900">Projects</a>
+            @if ($services->isNotEmpty())
+                <a href="#services-section" class="text-sm font-semibold leading-6 text-gray-900">Services</a>
+            @endif
+            @if ($team_members->isNotEmpty())
+                <a href="#team-section" class="text-sm font-semibold leading-6 text-gray-900">Teams</a>
+            @endif
+            @if ($projects->isNotEmpty())
+                <a href="#project-section" class="text-sm font-semibold leading-6 text-gray-900">Projects</a>
+            @endif
             <a href="#cta-section" class="text-sm font-semibold leading-6 text-gray-900">Try our Mobile App</a>
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">

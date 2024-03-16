@@ -16,7 +16,6 @@ class HomeController extends Controller
         $services = Service::limit(5)->get();
         $projects = Project::limit(6)->get();
 
-        // return $team_members;
         return view(
             'website.home.index',
             compact(
