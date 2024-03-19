@@ -1,3 +1,4 @@
+{{-- https://flowbite.com/blocks/publisher/related-articles/#carousel-slider-cards --}}
 @if ($projects->isNotEmpty())
     <div class="bg-gray-100 py-12" id="project-section" data-section-name="Project" data-section-id="project-section">
         <div class="max-w-7xl mx-auto px-4 lg:px-0">

@@ -1,3 +1,4 @@
+{{-- https://flowbite.com/blocks/marketing/footer/#original-footer-of-flowbite --}}
 <footer class="relative bg-gray-50 dark:bg-gray-800">
     <div class="p-4 py-8 mx-auto max-w-screen-xl md:p-16 lg:-10">
         <div class="grid grid-cols-2 gap-8 lg:grid-cols-6">

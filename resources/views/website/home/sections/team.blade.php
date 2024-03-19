@@ -1,3 +1,4 @@
+{{-- https://flowbite.com/blocks/marketing/team/#cards-with-grid-layout-and-cta --}}
 @if ($team_members->isNotEmpty())
     <section class="bg-gray-900" id="team-section" data-section-name="Team" data-section-id="team-section">
         <div class="max-w-screen-xl px-4 py-16 mx-auto lg:px-6 lg:py-24">
