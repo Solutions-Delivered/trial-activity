@@ -15,9 +15,6 @@
                 $table->string('slug');
                 $table->text('description');
                 $table->timestamps();
-
-                // Unique index for slug
-                $table->unique('slug');
             });
 
             Schema::create('faqs', function (Blueprint $table) {
@@ -27,7 +24,7 @@
                 $table->timestamps();
             });
 
-            Schema::create('socials', function (Blueprint $table) {
+            Schema::create('social_media', function (Blueprint $table) {
                 $table->id();
                 $table->string('url');
                 $table->string('icon');
@@ -45,6 +42,7 @@
                 $table->id();
                 $table->string('name');
                 $table->string('slug');
+                $table->string('short_description', 300);
                 $table->string('description');
                 $table->string('image')->nullable(); // Field for project image
                 $table->timestamps();
@@ -53,10 +51,10 @@
                 $table->unique('slug');
             });
 
-            // Associated table for gallery images related to projects
-            Schema::create('project_gallery_images', function (Blueprint $table) {
+            Schema::create('project_photos', function (Blueprint $table) {
                 $table->id();
                 $table->foreignId('project_id')->constrained('projects')->onDelete('cascade');
+                $table->string('name');
                 $table->string('image');
                 $table->string('description')->nullable();
                 $table->timestamps();
@@ -77,10 +75,10 @@
         public function down(): void
         {
             Schema::dropIfExists('team_members');
-            Schema::dropIfExists('project_gallery_images');
+            Schema::dropIfExists('project_photos');
             Schema::dropIfExists('projects');
             Schema::dropIfExists('memberships');
-            Schema::dropIfExists('socials');
+            Schema::dropIfExists('social_media');
             Schema::dropIfExists('faqs');
             Schema::dropIfExists('services');
         }

@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
             SocialSeeder::class,
             MembershipSeeder::class,
             ProjectSeeder::class,
-            ProjectGalleryImageSeeder::class,
+            ProjectPhotoSeeder::class,
             TeamMemberSeeder::class,
         ]);
     }

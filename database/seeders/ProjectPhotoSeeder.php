@@ -3,11 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\Project;
-use App\Models\ProjectGalleryImage;
+use App\Models\ProjectPhoto;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ProjectGalleryImageSeeder extends Seeder
+class ProjectPhotoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -19,7 +19,7 @@ class ProjectGalleryImageSeeder extends Seeder
         $projects = Project::all();
 
         foreach ($projects as $project) {
-            ProjectGalleryImage::factory()->count(5)->create([
+            ProjectPhoto::factory()->count(5)->create([
                 'project_id' => $project->id,
             ]);
         }
